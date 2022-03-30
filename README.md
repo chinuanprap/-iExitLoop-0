@@ -1,0 +1,2 @@
+# -iExitLoop-0
+;~          Example2($hGUIParent1) ; .... ;~          $iLoadGuiTwo = 0 ; .......... ;~      EndIf ; .........................         If $iExitLoop Then ExitLoop     WEnd     $iExitLoop = 0     GUIDelete($hGUIParent1) EndFunc   ;==>Example1  Func Example2($iParent = 0)     Opt("GUIOnEventMode", 1)     $hGUIParent2 = GUICreate("Child", 300, 400, -1, -1, -1, -1, $iParent)     GUISetOnEvent($GUI_EVENT_CLOSE, "OnEvent_CLOSE_TWO", $hGUIParent2)
